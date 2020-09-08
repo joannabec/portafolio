@@ -124,6 +124,18 @@ a {
   font-size: 2.7em;
 }
 
+.title {
+  font-family: "Alata", sans-serif;
+  margin-bottom: 4px;
+}
+
+.line {
+  width: 20px;
+  background-color: #000;
+  height: 0.5px;
+  margin-bottom: 30px;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,18 +147,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-main .title {
-  font-family: "Alata", sans-serif;
-  margin-bottom: 4px;
-}
-
-main .line {
-  width: 20px;
-  background-color: #000;
-  height: 0.5px;
-  margin-bottom: 30px;
 }
 
 main .about-me {
@@ -175,10 +175,13 @@ main .about-me .description {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: justify;
 }
 
 main .about-me .description .about-me-text {
   font-family: "Glegoo", serif;
+  font-size: 0.9em;
+  margin-bottom: 1.1em;
 }
 
 main .about-me .abilities {
@@ -195,7 +198,7 @@ main .about-me .abilities {
 main .about-me .abilities .abilities-category {
   width: 50%;
   text-align: center;
-  height: 400px;
+  height: 200px;
 }
 
 main .about-me .abilities .abilities-category .abilities-title {
@@ -215,6 +218,7 @@ main .projects {
           align-items: center;
   background-color: #fbfbff;
   width: 100%;
+  padding-bottom: 30px;
 }
 
 main .projects .title {
@@ -237,29 +241,115 @@ main .projects .container {
 }
 
 main .projects .container .project {
-  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   border: 1px solid gray;
   background-color: #FFF;
-  margin: 50px 0;
+  margin: 15px 0;
   padding: 10px;
 }
 
 main .projects .container .project .p-img {
-  width: 100%;
+  width: 45%;
 }
 
-main .projects .container .project .p-title {
-  margin-top: 20px;
+main .projects .container .project .project-content {
+  width: 55%;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .projects .container .project .project-content .p-title {
+  margin-top: 10px;
   font-family: "Alata", sans-serif;
 }
 
-main .projects .container .project .p-text {
-  font-size: 0.8em;
+main .projects .container .project .project-content .p-text {
+  font-size: 0.75em;
   margin-top: 5px;
   font-family: "Glegoo", serif;
+  text-align: justify;
+}
+
+main .projects .container .project .project-content .tech {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+main .projects .container .project .project-content .tech .text-g {
+  font-weight: normal;
+  color: #494949;
+}
+
+main .projects .container .project .project-content .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+main .projects .container .project .project-content .btn-container .btn {
+  width: 30%;
+  height: 30px;
+  margin: 20px;
+  background-color: #BFF2BD;
+  border: 2px solid #BFF2BD;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Alata", sans-serif;
+  font-size: 0.9em;
+}
+
+main .projects .container .project .project-content .btn-container .btn:hover {
+  background-color: #8BF288;
 }
 
 .footer {
-  background-color: gray;
+  background-color: #505050;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  padding-bottom: 30px;
+}
+
+.footer .icons {
+  font-size: 2.3em;
+  margin: 0 20px;
+}
+
+.footer .contact {
+  color: #edf2ef;
+  margin-top: 30px;
+  font-size: 1.8em;
+}
+
+.footer .l-footer {
+  background-color: #edf2ef;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */

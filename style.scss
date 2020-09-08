@@ -1,6 +1,8 @@
 $alata: 'Alata', sans-serif;
 $glego: 'Glegoo', serif;
 $light: #edf2ef;
+$green: #BFF2BD;
+$greenh:#8BF288;
 
 * {
     margin: 0;
@@ -96,23 +98,22 @@ a{
     }
 }
 
+.title{
+    font-family: $alata;
+    margin-bottom: 4px;
+}
+
+.line{
+    width: 20px;
+    background-color: #000;
+    height: 0.5px;
+    margin-bottom: 30px;
+}
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .title{
-        font-family: $alata;
-        margin-bottom: 4px;
-    }
-    
-    .line{
-        width: 20px;
-        background-color: #000;
-        height: 0.5px;
-        margin-bottom: 30px;
-    }
 
     .about-me{
         width: 60%;
@@ -125,9 +126,12 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: justify;
             
             .about-me-text{
                 font-family: $glego;
+                font-size: 0.9em;
+                margin-bottom: 1.1em;
             }
         }
 
@@ -140,7 +144,7 @@ main{
             .abilities-category{
                 width: 50%;
                 text-align: center;
-                height: 400px;
+                height: 200px;
 
                 .abilities-title{
                     font-family: $alata;
@@ -155,6 +159,7 @@ main{
         align-items: center;
         background-color: #fbfbff;
         width: 100%;
+        padding-bottom: 30px;
 
         .title{
             margin-top: 50px;
@@ -168,25 +173,68 @@ main{
             flex-wrap: wrap;
 
             .project{
-                width: 45%;
+                display: flex;
+                width: 100%;
                 border: 1px solid gray;
                 background-color: #FFF;
-                margin: 50px 0;
+                margin: 15px 0;
                 padding: 10px;
 
                 .p-img{
-                    width: 100%;
+                    width: 45%;
                 }
 
-                .p-title{
-                    margin-top: 20px;
-                    font-family: $alata;
-                }
+                .project-content{
+                    width: 55%;
+                    margin-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
 
-                .p-text{
-                    font-size: 0.8em;
-                    margin-top: 5px;
-                    font-family: $glego;
+                    .p-title{
+                        margin-top: 10px;
+                        font-family: $alata;
+                    }
+    
+                    .p-text{
+                        font-size: 0.75em;
+                        margin-top: 5px;
+                        font-family: $glego;
+                        text-align: justify;
+                    }
+
+                    .tech{
+                        font-weight: bold;
+                        font-size: 0.8em;
+                        .text-g{
+                            font-weight: normal;
+                            color: rgb(73, 73, 73);
+                        }
+                    }
+    
+                    .btn-container{
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        .btn{
+                            width: 30%;
+                            height: 30px;
+                            margin: 20px;
+                            background-color: $green;
+                            border: 2px solid $green;
+                            border-radius: 5px;
+                            color: #000;
+                            font-weight: bold;
+                            text-align: center;
+                            line-height: 30px;
+                            font-family: $alata;
+                            font-size: 0.9em;
+
+                            &:hover{
+                                background-color: $greenh;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -194,6 +242,26 @@ main{
 }
 
 .footer{
-    background-color: gray;
-}
+    background-color: rgb(80, 80, 80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    padding-bottom: 30px;
 
+    .icons{
+        font-size: 2.3em;
+        margin: 0 20px;
+    }
+
+    .contact{
+        color: $light;
+        margin-top: 30px;
+        font-size: 1.8em;
+    }
+    
+    .l-footer{
+        background-color: $light;
+        margin-bottom: 30px;
+    }
+}
