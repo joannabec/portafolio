@@ -1,101 +1,145 @@
 $alata: 'Alata', sans-serif;
 $glego: 'Glegoo', serif;
-$light: #edf2ef;
-$green: #BFF2BD;
 $greenh:#8BF288;
+$light: #F6F6F6;
+$green:#789F07;
+$dark: #333333;
+$gray: #6F6F6F;
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .fa-chevron-down{
-    color: #FFF;
-    font-size: 2em;
-    padding-bottom: 50px;
-    cursor: pointer;
+  font-size: 2em;
+  padding-bottom: 50px;
+  cursor: pointer;
 }
 
-.black{
-    color: #000;
+.p-black{
+  color: #000;
 }
 
 a{
-    text-decoration: none;
-    color: #FFF;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.p-main-aboutme{
+  background-color: $dark;
+}
+
+.p-green{
+  color: $green;
+}
+
+.p-dark{
+  color: $dark;
+}
+
+.p-light{
+  color: $light;
+}
+
+.p-gray{
+  color: $gray;
+}
+
+.alata{
+  font-family: $alata;
+}
+
+.glego{
+  font-family: $glego;
+}
+
+.p-section{
+  writing-mode: vertical-lr;
+}
+
+.p-red{
+  font-size: 1.3rem;
+}
+.p-text{
+
+  p{
+    line-height: 2rem;
+  }
+}
+
+.p-title{
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
+
+.p-subtitle{
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.p-line{
+  padding: 10px 0;
+  height: 100%;
+  .p-vline{
+    width: 0.8px;
+    height: 100%;
+    background-color: $green;
+  }
 }
 
 .header{
-    background-image: url('./assets/bg-header.jpg');
-    background-position: top;
-    height: 100vh;
-    background-size: cover;
+  background-color: $light;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu-nav{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 80%;
+  
+    .menu-list{
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
 
-    .menu-nav{
-        padding-top: 50px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        width: 80%;
-    
-        .menu-list{
-            font-family: $glego;
-            width: 40%;
-            display: flex;
-            justify-content: space-between;
-            cursor: pointer;
-    
-            li{
-                color: #FFF;
-                list-style: none;
-            }
-        }
+      li{
+        list-style: none;
+      }
     }
+  }
 
-    .presentation{
-        width: 80%;
-        color:#FFF;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        
-        p{
-            font-family: $alata;
-        }
+  .presentation{
+    width: 80%;
+    color:#FFF;
+    display: flex;
 
-        .p-hellow{
-            font-size: 2.5em;
-        }
-
-        .p-name{
-            font-size: 3.5em;
-        }
-
-        .p-profession{
-            font-family: $glego;
-            font-size: 1.5em;
-        }
-
-        div{
-            margin-top: 45px;
-            width: 10%;
-            display: flex;
-            justify-content: space-between;
-
-            .fab{
-                font-size: 2.7em;
-            }
-        }
+    .p-presentation{
+      font-size: 1rem;
+      line-height: 1.2rem;
     }
+  
+    span.p-red{
+      font-size: 1rem;
+      margin: 0 3px;
+    }
+       
+    div{
+
+      .fab{
+        font-size: 2.7em;
+      }
+    }
+  }
 }
 
 .title{

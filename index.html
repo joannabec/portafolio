@@ -5,37 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Glegoo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>Mariela Benitez - portafolio</title>
 </head>
 <body>
   <header class="header">
-    <nav class="menu-nav">
-      <ul class="menu-list">
-        <li>Inicio</li>
-        <li>
-          <a href="#aboutMe">Sobre mi</a>
-        </li>
-        <li>
-          <a href="#projects">Proyectos</a>
-        </li>
-        <li> 
-          <a href="#contact">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="presentation">
-      <p class="p-hellow">¡Hola! Soy</p>
-      <p class="p-name">Mariela Benitez</p>
-      <p class="p-profession">Front-End developer</p>
-      <div>
-        <a class="fab fa-linkedin" href="https://www.linkedin.com/in/marielabenitez/" target="_blank"></a>
-        <a class="fab fa-github" href="https://github.com/mariebec" target="_blank"></a>
+    <nav class="menu-nav transparent z-depth-0">
+      <div class="menu-list">
+        <a class="glego p-dark" href="#">Inicio</a>
+        <a class="glego p-dark" href="#aboutMe">Sobre mi</a>
+        <a class="glego p-dark" href="#projects">Proyectos</a>
+        <a class="glego p-dark" href="#contact">Contacto</a>
       </div>
+    </nav>
+    <section class="row presentation">
+      <div class="col s1">
+        <span class="p-title p-gray alata">01</span>
+        <div class="p-line">
+          <div class="p-vline"></div>
+        </div>
+        <span class="p-section p-gray glego">Inicio</span>
+      </div>
+      <div class="col s11">
+        <div class="right-align">
+          <p class="p-presentation p-dark alata">Hola, soy Mariela Benitez,</p>
+          <p class="p-presentation p-dark alata">desarrolladora <span class="p-green">Front-end</span></p>
+          <p class="p-presentation p-dark alata">con background en diseño<span class="p-green">.</span></p>
+        </div>
+        <div class="right-align">
+          <a class="fab fa-linkedin" href="https://www.linkedin.com/in/marielabenitez/" target="_blank"></a>
+          <a class="fab fa-github" href="https://github.com/mariebec" target="_blank"></a>
+        </div>
+      </div>
+    </section>
+    <div class="col s12">
+      <a href="#aboutMe" class="fas fa-chevron-down"></a>
     </div>
-    <a href="#aboutMe" class="fas fa-chevron-down"></a>
   </header>
   
   <main>
+    <section id="aboutMe" class="p-main-aboutme pt-5">
+
+        <div class="row pt-5">
+          <section class="">
+            <div class="p-title">02</div>
+            <div class="p-line">
+              <div class="p-vline"></div>
+            </div>
+            <div class="p-section glego">Sobre mí</div>
+          </section>
+          <section class="">
+            <div class="description">
+              <h2 class="p-title alata">Sobre mí</h2>
+              <div class="p-text">
+                <p class="p-light glego">Inicié mi camino en el mundo de la programación gracias a Laboratoria, donde aprendí sobre desarrollo web 
+                  (Front-end) y metodolodías Ágiles. Como soy nueva en esto, mi prioridad es sentar las bases de programación y pensamiento lógico, en el futuro 
+                  mi objetivo es tener la experiencia y los conocimientos necesarios para poder resolver problemas complejos mediante el código.</p>
+                <p class="p-light glego">En cuanto a mi background, egresé de la carrera de diseño industrial y ejercí la profesión desarrollando productos, también poseo conocimiento de herramientas y conceptos de diseño gráfico.</p>
+              </div>
+            </div>
+            <div class="">
+              <h4 class="p-subtitle alata">Habilidades técnicas</h4>
+              <div class=""></div>
+            </div>
+            <div class="text-right">  
+            </div>
+          </section>
+
+      </div>
+    </section>
     <section id="aboutMe" class="about-me">
       <div class="description">
         <h2 class="title">Sobre mi</h2>
@@ -52,7 +90,7 @@
           <h3 class="abilities-title">Habilidades blandas</h3>
         </div>
       </div> -->
-      <a href="#projects" class="fas fa-chevron-down black"></a>
+      <a href="#projects" class="fas fa-chevron-down p-black"></a>
     </section>
     <section id="projects" class="projects">
       <h2 class="title">Proyectos</h2>
