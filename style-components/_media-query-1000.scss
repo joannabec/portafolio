@@ -1,0 +1,134 @@
+@media screen and (min-width: 1000px) {
+  .p-section{
+    font-size: 1.1rem;
+  }
+
+  .p-title{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .p-subtitle{
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+  }
+
+  .header{
+    height: 100vh;
+  
+    .menu-nav{
+      justify-content: flex-end;
+      margin-top: 50px;
+
+      .menu-list{
+        width: 40%;
+
+        a{
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .p-red{
+      font-size: 1.3rem;
+    }
+
+    .arrow-down{
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+  
+    .presentation{
+      width: 80%;
+      margin-top: 0px;
+
+      .p-presentation{
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+
+      .redes{
+        margin-top: 100px;
+      }
+    }
+  }
+
+  main{
+    .p-main-aboutme{
+      padding: 5rem 0 0 0;
+    }
+
+    .arrow-down{
+      margin-top: 70px;
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+
+    .about-me-container{
+      width: 80%;
+      .about-me{
+        padding-left: 1.5rem;
+        
+        .p-text{
+          p{
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            line-height: 2rem;
+          }
+        }
+
+        .abilities{
+          margin-top: 60px;
+        }
+        .soft{
+          margin-top: 80px;
+        }
+
+        .soft-skills{
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+          margin-top: 20px;
+
+          p{
+            font-size: 1.1rem;
+            white-space: nowrap;
+            margin: 0 10px 0 0;
+          }
+        }
+
+        .technologies{
+          margin-top: 50px;
+  
+          .each-tech{
+            margin: 20px 5px;
+            min-width: 180px;
+            p{
+              font-size: 1.3rem;
+            }
+            i{
+              font-size: 70px;
+            }
+            svg{
+              width: 70px;
+              height: 70px;
+            }
+          }
+        }
+      }
+    }
+
+    .projects-section{
+      .projects-container{
+        width: 80%;
+
+        .p-descrip{
+          font-size: 1.1rem;
+          line-height: 1.2rem;
+          margin-top: 1.8rem;
+        }
+      }
+    }
+  }
+}

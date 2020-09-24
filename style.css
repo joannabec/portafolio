@@ -7,12 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.fa-chevron-down {
-  font-size: 2em;
-  padding-bottom: 50px;
-  cursor: pointer;
-}
-
 .p-black {
   color: #000;
 }
@@ -20,10 +14,6 @@ html {
 a {
   text-decoration: none;
   color: #FFF;
-}
-
-.p-main-aboutme {
-  background-color: #333333;
 }
 
 .p-green {
@@ -50,44 +40,75 @@ a {
   font-family: "Glegoo", serif;
 }
 
-.p-section {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+.fa-chevron-down {
+  font-size: 2em;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+
+.arrow-down {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .p-red {
-  font-size: 1.3rem;
-}
-
-.p-text p {
-  line-height: 2rem;
+  font-size: 0.9rem;
 }
 
 .p-title {
-  font-size: 3.2rem;
-  line-height: 3.2rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .p-subtitle {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
 }
 
-.p-line {
+.line-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.line-container .p-title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.line-container .p-line {
   padding: 10px 0;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.p-line .p-vline {
+.line-container .p-line .p-vline {
   width: 0.8px;
   height: 100%;
   background-color: #789F07;
 }
 
+.line-container .p-section {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .header {
   background-color: #F6F6F6;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +138,6 @@ a {
 }
 
 .header .menu-nav .menu-list {
-  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,38 +151,52 @@ a {
   list-style: none;
 }
 
+.header .menu-nav .menu-h {
+  cursor: pointer;
+}
+
+.header .menu-nav .menu-list-h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F6F6F6;
+  z-index: 100;
+}
+
 .header .presentation {
-  width: 80%;
+  width: 90%;
   color: #FFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 30px;
+}
+
+.header .presentation .row .col {
+  padding: 0 !important;
 }
 
 .header .presentation .p-presentation {
-  font-size: 1rem;
-  line-height: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
 }
 
 .header .presentation span.p-red {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 3px;
 }
 
-.header .presentation div .fab {
-  font-size: 2.7em;
+.header .presentation .redes {
+  margin-top: 30px;
 }
 
 .title {
   font-family: "Alata", sans-serif;
   margin-bottom: 4px;
-}
-
-.line {
-  width: 20px;
-  background-color: #000;
-  height: 0.5px;
-  margin-bottom: 30px;
 }
 
 main {
@@ -178,9 +212,8 @@ main {
           align-items: center;
 }
 
-main .about-me {
-  width: 60%;
-  margin-top: 50px;
+main .p-main-aboutme {
+  background-color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,102 +224,67 @@ main .about-me {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3rem 0 0 0;
 }
 
-main .about-me .description {
+main .about-me-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 90%;
+}
+
+main .about-me-container .p-section {
+  white-space: nowrap;
+}
+
+main .about-me-container .about-me {
+  padding-left: 1rem;
+}
+
+main .about-me-container .about-me .description .col {
+  padding: 0;
+}
+
+main .about-me-container .about-me .p-text p {
+  margin-top: 1.5rem;
   text-align: justify;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
 }
 
-main .about-me .description .about-me-text {
+main .about-me-container .about-me .abilities {
+  margin-top: 30px;
+  padding: 0;
+}
+
+main .about-me-container .about-me .soft {
+  margin-top: 40px;
+}
+
+main .about-me-container .about-me .soft-skills {
+  margin: 0;
+}
+
+main .about-me-container .about-me .soft-skills p {
   font-family: "Glegoo", serif;
-  font-size: 0.9em;
-  margin-bottom: 1.1em;
+  font-size: 0.9rem;
+  font-weight: lighter;
 }
 
-main .about-me .abilities {
-  width: 100%;
+main .about-me-container .about-me .technologies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 60px;
-}
-
-main .about-me .abilities .abilities-category {
-  width: 50%;
-  text-align: center;
-  height: 200px;
-}
-
-main .about-me .abilities .abilities-category .abilities-title {
-  font-family: "Alata", sans-serif;
-}
-
-main .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #fbfbff;
-  width: 100%;
-  padding-bottom: 30px;
-}
-
-main .projects .title {
-  margin-top: 50px;
-}
-
-main .projects .container {
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 10px;
 }
 
-main .projects .container .project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  border: 1px solid gray;
-  background-color: #FFF;
-  margin: 15px 0;
-  padding: 10px;
-}
-
-main .projects .container .project .p-img {
-  width: 45%;
-}
-
-main .projects .container .project .project-content {
-  width: 55%;
-  margin-left: 10px;
+main .about-me-container .about-me .technologies .each-tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,60 +292,65 @@ main .projects .container .project .project-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 5px;
+  width: 80px;
 }
 
-main .projects .container .project .project-content .p-title {
-  margin-top: 10px;
-  font-family: "Alata", sans-serif;
+main .about-me-container .about-me .technologies .each-tech p {
+  font-size: 1.2rem;
 }
 
-main .projects .container .project .project-content .p-text {
-  font-size: 0.75em;
-  margin-top: 5px;
-  font-family: "Glegoo", serif;
-  text-align: justify;
+main .about-me-container .about-me .technologies .each-tech i {
+  font-size: 42px;
 }
 
-main .projects .container .project .project-content .tech {
-  font-weight: bold;
-  font-size: 0.8em;
-}
-
-main .projects .container .project .project-content .tech .text-g {
-  font-weight: normal;
-  color: #494949;
-}
-
-main .projects .container .project .project-content .btn-container {
+main .projects-section {
+  background-color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0 0 0;
 }
 
-main .projects .container .project .project-content .btn-container .btn {
-  width: 30%;
-  height: 30px;
-  margin: 20px;
-  background-color: #789F07;
-  border: 2px solid #789F07;
-  border-radius: 5px;
-  color: #000;
-  font-weight: bold;
-  text-align: center;
-  line-height: 30px;
-  font-family: "Alata", sans-serif;
-  font-size: 0.9em;
+main .projects-section .projects-container {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-main .projects .container .project .project-content .btn-container .btn:hover {
-  background-color: #8BF288;
+main .projects-section .projects-container .p-descrip {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  margin-top: 1rem;
+}
+
+main .projects-section .row {
+  margin: 0;
+}
+
+main .projects-section .animation:hover .more {
+  -webkit-animation: heartBeat 1s;
+  animation: heartBeat 1s;
+}
+
+main .projects-section .more:hover {
+  color: #6F6F6F;
+}
+
+main .projects-section .img-card:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 
 .footer {
@@ -380,5 +383,117 @@ main .projects .container .project .project-content .btn-container .btn:hover {
 .footer .l-footer {
   background-color: #F6F6F6;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+  .p-section {
+    font-size: 1.1rem;
+  }
+  .p-title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .p-subtitle {
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+  }
+  .header {
+    height: 100vh;
+  }
+  .header .menu-nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 50px;
+  }
+  .header .menu-nav .menu-list {
+    width: 40%;
+  }
+  .header .menu-nav .menu-list a {
+    font-size: 1.1rem;
+  }
+  .header .p-red {
+    font-size: 1.3rem;
+  }
+  .header .arrow-down {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .header .presentation {
+    width: 80%;
+    margin-top: 0px;
+  }
+  .header .presentation .p-presentation {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .header .presentation .redes {
+    margin-top: 100px;
+  }
+  main .p-main-aboutme {
+    padding: 5rem 0 0 0;
+  }
+  main .arrow-down {
+    margin-top: 70px;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  main .about-me-container {
+    width: 80%;
+  }
+  main .about-me-container .about-me {
+    padding-left: 1.5rem;
+  }
+  main .about-me-container .about-me .p-text p {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+  main .about-me-container .about-me .abilities {
+    margin-top: 60px;
+  }
+  main .about-me-container .about-me .soft {
+    margin-top: 80px;
+  }
+  main .about-me-container .about-me .soft-skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+    margin-top: 20px;
+  }
+  main .about-me-container .about-me .soft-skills p {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    margin: 0 10px 0 0;
+  }
+  main .about-me-container .about-me .technologies {
+    margin-top: 50px;
+  }
+  main .about-me-container .about-me .technologies .each-tech {
+    margin: 20px 5px;
+    min-width: 180px;
+  }
+  main .about-me-container .about-me .technologies .each-tech p {
+    font-size: 1.3rem;
+  }
+  main .about-me-container .about-me .technologies .each-tech i {
+    font-size: 70px;
+  }
+  main .about-me-container .about-me .technologies .each-tech svg {
+    width: 70px;
+    height: 70px;
+  }
+  main .projects-section .projects-container {
+    width: 80%;
+  }
+  main .projects-section .projects-container .p-descrip {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    margin-top: 1.8rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
