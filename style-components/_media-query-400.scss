@@ -1,0 +1,22 @@
+@media screen and (min-width: 400px) {
+  .header{
+		.presentation{
+			.p-presentation{
+				font-size: 1.7rem;
+				line-height: 2rem;
+			}
+		}
+	}
+	
+	.main{
+		.about-me-container{
+			.about-me{
+				.p-text{
+					p{
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}

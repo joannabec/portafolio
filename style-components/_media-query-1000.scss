@@ -19,6 +19,7 @@
     .menu-nav{
       justify-content: flex-end;
       margin-top: 50px;
+      width: 80%;
 
       .menu-list{
         width: 40%;
@@ -120,13 +121,18 @@
     }
 
     .projects-section{
+      padding: 5rem 0;
       .projects-container{
         width: 80%;
 
         .p-descrip{
           font-size: 1.1rem;
           line-height: 1.2rem;
-          margin-top: 1.8rem;
+          margin: 1.8rem 0;
+        }
+
+        .btn-container{
+          margin-top: 1.5rem;
         }
       }
     }

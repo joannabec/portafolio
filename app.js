@@ -1,21 +1,7 @@
 /* Menu */
-const menu = document.querySelector('.menu-h');
-
-/* const toggleMenu = () => {
-  const list = document.querySelector('#menu-list-h');
-  list.classList.toggle('hide');
-};
-
-menu.addEventListener('click', () => {
-  toggleMenu();
-}); */
-
-document.addEventListener('DOMContentLoaded', function() {
-  let sidenav = document.querySelectorAll('.sidenav');
-  let instancia_sidenav = M.Sidenav.init(sidenav,{});    
-  let dropdowns = document.querySelectorAll('.dropdown-trigger');
-  let instancia_dropwdown = M.Dropdown.init(dropdowns, {
-  hover:false});
+document.addEventListener('DOMContentLoaded',  () => {
+  const sidenav = document.querySelectorAll('.sidenav');
+  let instancia_sidenav = M.Sidenav.init(sidenav,{});
 });
 
 /* Tech skills */
@@ -138,8 +124,8 @@ const arrProjects = [
     tech: 'vanillaJs, CSS, Jest, Figma, Trello',
     btn: `
     <div class="btn-container">
-      <a class="btn" href="https://mariebec.github.io/LIM012-data-lovers/src/" target="_blank">Ver proyecto</a>
-      <a class="btn" href="https://github.com/mariebec/LIM012-data-lovers" target="_blank">Ver repositorio</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://mariebec.github.io/LIM012-data-lovers/src/" target="_blank">Deploy</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-data-lovers" target="_blank">Código</a>
     </div>
     `,
   },
@@ -151,8 +137,8 @@ const arrProjects = [
     tech: 'vanillaJs, CSS, Firebase, Jest, Figma, Github Projects',
     btn: `
     <div class="btn-container">
-      <a class="btn" href="https://mariebec.github.io/LIM012-fe-social-network/src/" target="_blank">Ver proyecto</a>
-      <a class="btn" href="https://github.com/mariebec/LIM012-fe-social-network" target="_blank">Ver repositorio</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://mariebec.github.io/LIM012-fe-social-network/src/" target="_blank">Deploy</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-social-network" target="_blank">Código</a>
     </div>
     `,
   },
@@ -164,7 +150,7 @@ const arrProjects = [
     tech: 'Nodejs, Axios, Jest, Github Projects',
     btn: `
     <div class="btn-container">
-      <a class="btn" href="https://github.com/mariebec/LIM012-fe-md-links" target="_blank">Ver proyecto</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-md-links" target="_blank">Código</a>
     </div>
     `,
   },
@@ -176,8 +162,8 @@ const arrProjects = [
     tech: 'Reactjs, Sass, React testing library, Mockoon, json-server, node-fetch, Figma, Asana',
     btn: `
     <div class="btn-container">
-      <a class="btn" href="https://burger-queen-ac-m.herokuapp.com/" target="_blank">Ver proyecto</a>
-      <a class="btn" href="https://github.com/mariebec/LIM012-fe-burger-queen-api-client" target="_blank">Ver repositorio</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://burger-queen-ac-m.herokuapp.com/" target="_blank">Deploy</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-burger-queen-api-client" target="_blank">Código</a>
     </div>
     `,
   },
@@ -195,17 +181,31 @@ arrProjects.forEach((element) => {
         <img class="activator img-card" src=${element.img}>
       </div>
       <div class="card-content animation">
-        <span class="card-title activator grey-text text-darken-4">${element.title}<i class="material-icons right more">arrow_upward</i></span>
+        <span class="card-title activator grey-text text-darken-4 alata">${element.title}<i class="material-icons right more">keyboard_arrow_up</i></span>
         ${element.btn}
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">${element.title}<i class="material-icons right">close</i></span>
-        <p>${element.description1}</p>
-        <p>${element.description2}</p>
-        <p>Tecnologías: ${element.tech}</p>
+        <span class="card-title grey-text text-darken-4 alata">${element.title}<i class="material-icons right">close</i></span>
+        <p class="glego text-reveal">${element.description1}</p>
+        <p class="glego text-reveal">${element.description2}</p>
+        <p class="glego text-reveal t-tech">Tecnologías: <span class="p-gray">${element.tech}</span></p>
         ${element.btn}
       </div>
     </div>
   `
   projectsContainer.appendChild(eachProject);
+});
+
+window.onscroll = () => {
+  if (document.documentElement.scrollTop > 100) {
+    document.querySelector('.go-top-container').classList.add('show');
+  } else {
+    document.querySelector('.go-top-container').classList.remove('show');
+  }
+};
+document.querySelector('.go-top-container').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 });

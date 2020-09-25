@@ -54,13 +54,26 @@ a{
   cursor: pointer;
 }
 
-.arrow-down{
-  font-size: 2rem;
-  margin-bottom: 1rem;
+header{
+  .arrow-down{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+main{
+  .arrow-down{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .p-red{
   font-size: 0.9rem;
+}
+
+.p-0{
+  padding: 0 !important;
 }
 
 .p-title{
@@ -99,217 +112,14 @@ a{
   }
 }
 
-.header{
-  background-color: $light;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  .menu-nav{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    width: 80%;
-  
-    .menu-list{
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-
-      li{
-        list-style: none;
-      }
-    }
-
-    .menu-h{
-      cursor: pointer;
-    }
-  
-    .menu-list-h{
-      display: flex;
-      flex-direction: column;
-      background-color: $light;
-      z-index: 100;
-    }
-  }
-   
-  .presentation{
-    width: 90%;
-    color:#FFF;
-    display: flex;
-    margin-top: 30px;
-
-    .row{
-      .col{
-        padding: 0 !important;
-      }
-    }
-
-    .p-presentation{
-      font-size: 1.2rem;
-      line-height: 1.7rem;
-    }
-  
-    span.p-red{
-      font-size: 1.5rem;
-      margin: 0 3px;
-    }
-
-    .redes{
-      margin-top: 30px;
-    }
-  }
-}
-
 .title{
   font-family: $alata;
   margin-bottom: 4px;
 }
 
-main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import "./style-components/header";
+@import "./style-components/main";
+@import "./style-components/footer";
 
-  .p-main-aboutme{
-    background-color: $dark;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 0 0 0;
-  }
-
-  .about-me-container{
-    display: flex;
-    width: 90%;
-
-    .p-section{
-      white-space: nowrap;
-    }
-
-    .about-me{
-      padding-left: 1rem;
-      .description{
-        .col{
-          padding: 0;
-        }
-      }
-
-      .p-text{
-        p{
-          margin-top: 1.5rem;
-          text-align: justify;
-          font-size: 0.8rem;
-          line-height: 1.5rem;
-        }
-      }
-
-      .abilities{
-        margin-top: 30px;
-        padding: 0;
-      }
-
-      .soft{
-        margin-top: 40px;
-      }
-
-      .soft-skills{
-        margin: 0;
-        p{
-          font-family: $glego;
-          font-size: 0.9rem;
-          font-weight: lighter;
-        }
-      }
-
-      .technologies{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-top: 10px;
-
-        .each-tech{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 10px 5px;
-          width: 80px;
-          p{
-            font-size: 1.2rem;
-          }
-          i{
-            font-size: 42px;
-          }
-        }
-      }
-    }
-  }
-  .projects-section{
-    background-color: $light;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0 0 0;
-
-    .projects-container{
-      width: 90%;
-      display: flex;
-
-      .p-descrip{
-        font-size: 0.8rem;
-        line-height: 1.2rem;
-        margin-top: 1rem;
-      }
-    }
-
-    .row{
-      margin: 0;
-    }
-
-    .animation:hover .more{
-      -webkit-animation: heartBeat 1s;
-      animation: heartBeat 1s;
-    }
-
-    .more:hover{
-      color: $gray;
-    }
-
-    .img-card:hover{
-      opacity:0.8;
-      filter:alpha(opacity=80);
-    }
-  }
-}
-
-.footer{
-  background-color: rgb(80, 80, 80);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 150px;
-  padding-bottom: 30px;
-
-  .icons{
-    font-size: 2.3em;
-    margin: 0 20px;
-  }
-
-  .contact{
-    color: $light;
-    margin-top: 30px;
-    font-size: 1.8em;
-  }
-  
-  .l-footer{
-    background-color: $light;
-    margin-bottom: 30px;
-  }
-}
-
+@import "./style-components/media-query-400";
 @import "./style-components/media-query-1000";
-
-@media screen and (min-width: 1400px) {
-  
-}

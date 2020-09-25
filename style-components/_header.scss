@@ -1,0 +1,49 @@
+.header{
+  background-color: $light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  .menu-nav{
+    
+    .menu-list{
+      display: flex;
+      justify-content: space-between;
+      a{
+        cursor: pointer;
+
+        &:hover{
+          color: $green;
+        }
+      }
+    }
+  }
+     
+  .presentation{
+    width: 90%;
+    color:#FFF;
+    display: flex;
+    margin-top: 30px;
+
+    .row{
+      .col{
+        padding: 0 !important;
+      }
+    }
+
+    .p-presentation{
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  
+    span.p-red{
+      font-size: 1.5rem;
+      margin: 0 3px;
+    }
+
+    .redes{
+      margin-top: 30px;
+    }
+  }
+}

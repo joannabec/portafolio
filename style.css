@@ -46,13 +46,22 @@ a {
   cursor: pointer;
 }
 
-.arrow-down {
-  font-size: 2rem;
+header .arrow-down {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+main .arrow-down {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .p-red {
   font-size: 0.9rem;
+}
+
+.p-0 {
+  padding: 0 !important;
 }
 
 .p-title {
@@ -107,6 +116,11 @@ a {
       align-self: center;
 }
 
+.title {
+  font-family: "Alata", sans-serif;
+  margin-bottom: 4px;
+}
+
 .header {
   background-color: #F6F6F6;
   display: -webkit-box;
@@ -124,19 +138,6 @@ a {
           justify-content: space-between;
 }
 
-.header .menu-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 80%;
-}
-
 .header .menu-nav .menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,27 +145,14 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header .menu-nav .menu-list a {
   cursor: pointer;
 }
 
-.header .menu-nav .menu-list li {
-  list-style: none;
-}
-
-.header .menu-nav .menu-h {
-  cursor: pointer;
-}
-
-.header .menu-nav .menu-list-h {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #F6F6F6;
-  z-index: 100;
+.header .menu-nav .menu-list a:hover {
+  color: #789F07;
 }
 
 .header .presentation {
@@ -194,11 +182,6 @@ a {
   margin-top: 30px;
 }
 
-.title {
-  font-family: "Alata", sans-serif;
-  margin-bottom: 4px;
-}
-
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,6 +193,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* UP BUTTON */
 }
 
 main .p-main-aboutme {
@@ -249,7 +233,7 @@ main .about-me-container .about-me .description .col {
 main .about-me-container .about-me .p-text p {
   margin-top: 1.5rem;
   text-align: justify;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.5rem;
 }
 
@@ -268,7 +252,7 @@ main .about-me-container .about-me .soft-skills {
 
 main .about-me-container .about-me .soft-skills p {
   font-family: "Glegoo", serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: lighter;
 }
 
@@ -319,7 +303,7 @@ main .projects-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0 0 0;
+  padding: 3rem 0 2rem 0;
 }
 
 main .projects-section .projects-container {
@@ -332,11 +316,37 @@ main .projects-section .projects-container {
 main .projects-section .projects-container .p-descrip {
   font-size: 0.8rem;
   line-height: 1.2rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
-main .projects-section .row {
-  margin: 0;
+main .projects-section .card-content {
+  padding: 20px;
+}
+
+main .projects-section .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .projects-section .btn-container .p-btn {
+  width: 45%;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+main .projects-section .text-reveal {
+  text-align: justify;
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+main .projects-section .t-tech {
+  font-weight: bold;
+  margin-top: 0.8rem;
 }
 
 main .projects-section .animation:hover .more {
@@ -345,7 +355,7 @@ main .projects-section .animation:hover .more {
 }
 
 main .projects-section .more:hover {
-  color: #6F6F6F;
+  color: #789F07;
 }
 
 main .projects-section .img-card:hover {
@@ -353,8 +363,50 @@ main .projects-section .img-card:hover {
   filter: alpha(opacity=80);
 }
 
+main .go-top-container {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 3.5rem;
+  width: 1rem;
+  height: 1rem;
+  z-index: -3;
+}
+
+main .go-top {
+  display: inline-block;
+  position: relative;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 50%;
+  background: #6F6F6F;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: -1;
+}
+
+main .show {
+  z-index: 10;
+}
+
+main .show .go-top {
+  -webkit-animation: popup .1s ease-in-out;
+          animation: popup .1s ease-in-out;
+  width: 3rem;
+  height: 3rem;
+  color: #F6F6F6;
+  z-index: 11;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
 .footer {
-  background-color: #505050;
+  background-color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,9 +432,18 @@ main .projects-section .img-card:hover {
   font-size: 1.8em;
 }
 
-.footer .l-footer {
-  background-color: #F6F6F6;
-  margin-bottom: 30px;
+.footer .media {
+  margin-top: 1.8rem;
+}
+
+@media screen and (min-width: 400px) {
+  .header .presentation .p-presentation {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  .main .about-me-container .about-me .p-text p {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -405,6 +466,7 @@ main .projects-section .img-card:hover {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-top: 50px;
+    width: 80%;
   }
   .header .menu-nav .menu-list {
     width: 40%;
@@ -487,13 +549,19 @@ main .projects-section .img-card:hover {
     width: 70px;
     height: 70px;
   }
+  main .projects-section {
+    padding: 5rem 0;
+  }
   main .projects-section .projects-container {
     width: 80%;
   }
   main .projects-section .projects-container .p-descrip {
     font-size: 1.1rem;
     line-height: 1.2rem;
-    margin-top: 1.8rem;
+    margin: 1.8rem 0;
+  }
+  main .projects-section .projects-container .btn-container {
+    margin-top: 1.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

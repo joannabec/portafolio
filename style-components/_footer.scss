@@ -1,0 +1,23 @@
+.footer{
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    padding-bottom: 30px;
+  
+    .icons{
+      font-size: 2.3em;
+      margin: 0 20px;
+    }
+
+    .contact{
+      color: $light;
+      margin-top: 30px;
+      font-size: 1.8em;
+    }
+
+    .media{
+      margin-top: 1.8rem;
+    }
+  }
