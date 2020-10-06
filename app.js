@@ -120,7 +120,7 @@ const arrProjects = [
     title: 'PokePedia',
     img: 'assets/pokepedia-mockup-cel.jpg',
     description1: 'Pokepedia es una página web para jugadores de Pokemon Go y fánaticos de la serie de televisión, se puede encontrar información sobre cada uno de los pokemones, sus evoluciones, ataques, tipo y más!',
-    description2: 'El proceso del proyecto inició con la investigación del tema con usuarios reales para detectar qué información debía aportar la página, luego se realizaron prototipos de baja y alta fidelidad para obtener feedbak e iterar las propuestas de diseño, finalmente pasamos a la parte divertida, el código.',
+    description2: 'El proceso del proyecto inició con la investigación del tema con usuarios reales para detectar qué información debería aportar la página, luego se realizaron prototipos de baja y alta fidelidad para obtener feedbak e iterar las propuestas de diseño, finalmente pasamos a la parte divertida, el código.',
     tech: 'vanillaJs, CSS, Jest, Figma, Trello',
     btn: `
     <div class="btn-container">
@@ -146,7 +146,7 @@ const arrProjects = [
     title: 'Md-links',
     img: 'assets/md-links.jpg',
     description1: 'Mdlinks es una librería que lee archivos con formato markdown, detecta los enlaces que contiene, a partir de esto obtener los estatus y realizar estadísticas.',
-    description2: 'Se puede importar como módulo en un proyecto, como sí también posee una Interfaz de Línea de Comandos.',
+    description2: 'Se puede importar como módulo en un proyecto, como así también posee una Interfaz de Línea de Comandos.',
     tech: 'Nodejs, Axios, Jest, Github Projects',
     btn: `
     <div class="btn-container">
