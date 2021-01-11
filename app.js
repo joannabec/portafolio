@@ -124,8 +124,8 @@ const arrProjects = [
     tech: 'vanillaJs, CSS, Jest, Figma, Trello',
     btn: `
     <div class="btn-container">
-      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://mariebec.github.io/LIM012-data-lovers/src/" target="_blank">Deploy</a>
-      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-data-lovers" target="_blank">Código</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://mariebec.github.io/LIM012-data-lovers/src/" target="_blank" rel="noopener">Deploy</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-data-lovers" target="_blank" rel="noopener">Código</a>
     </div>
     `,
   },
@@ -137,8 +137,8 @@ const arrProjects = [
     tech: 'vanillaJs, CSS, Firebase, Jest, Figma, Github Projects',
     btn: `
     <div class="btn-container">
-      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://mariebec.github.io/LIM012-fe-social-network/src/" target="_blank">Deploy</a>
-      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-social-network" target="_blank">Código</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://mariebec.github.io/LIM012-fe-social-network/src/" target="_blank" rel="noopener">Deploy</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-social-network" target="_blank" rel="noopener">Código</a>
     </div>
     `,
   },
@@ -150,7 +150,7 @@ const arrProjects = [
     tech: 'Nodejs, Axios, Jest, Github Projects',
     btn: `
     <div class="btn-container">
-      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-md-links" target="_blank">Código</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-md-links" target="_blank" rel="noopener">Código</a>
     </div>
     `,
   },
@@ -162,8 +162,8 @@ const arrProjects = [
     tech: 'Reactjs, Sass, React testing library, Mockoon, json-server, node-fetch, Figma, Asana',
     btn: `
     <div class="btn-container">
-      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://burger-queen-ac-m.herokuapp.com/" target="_blank">Deploy</a>
-      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-burger-queen-api-client" target="_blank">Código</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://burger-queen-ac-m.herokuapp.com/" target="_blank" rel="noopener">Deploy</a>
+      <a class="btn-small p-btn p-0 glego grey darken-1" href="https://github.com/mariebec/LIM012-fe-burger-queen-api-client" target="_blank" rel="noopener">Código</a>
     </div>
     `,
   },
@@ -178,7 +178,7 @@ arrProjects.forEach((element) => {
   eachProject.innerHTML = `
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator img-card" src=${element.img}>
+        <img class="activator img-card" src=${element.img} alt="${element.title}">
       </div>
       <div class="card-content animation">
         <span class="card-title activator grey-text text-darken-4 alata">${element.title}<i class="material-icons right more">keyboard_arrow_up</i></span>
